@@ -1,0 +1,46 @@
+<mat-sidenav-container class="page-container">
+    <input type="hidden" value="main" #navbar>
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+
+            <div class="card card-large" [ngClass]='navbar.value == "main"? "selected":"not-selected"'
+                (click)="navbar.value = 'main'" navbarindex="0">
+                <span>Главная страница</span>
+            </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "1"? "selected":"not-selected"'
+                (click)="navbar.value = '1'" navbarindex="0">
+                <span>О достоинствах и ограничениях ПЗС</span>
+            </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "2"? "selected":"not-selected"'
+                (click)="navbar.value = '2'" navbarindex="0">
+                <span>Преимущества и недостатки матриц</span>
+            </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "3"? "selected":"not-selected"'
+                (click)="navbar.value = '3'" navbarindex="0">
+                <span>О параметрах и характеристиках ПЗС</span>
+            </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "4"? "selected":"not-selected"'
+                (click)="navbar.value = '4'" navbarindex="0">
+                <span>Многообразие ПЗС</span>
+            </div>
+            <div class="card card-large" [ngClass]='navbar.value == "5"? "selected":"not-selected"'
+                (click)="navbar.value = '5'" navbarindex="0">
+                <span>Заключение (вывод к главе 1)</span>
+            </div>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-primer1-glav *ngIf="navbar.value == 'main'"></app-primer1-glav>
+        <app-dostoinstva *ngIf="navbar.value == '1'"></app-dostoinstva>
+        <app-premushestva *ngIf="navbar.value == '2'"></app-premushestva>
+        <app-harakteristiki *ngIf="navbar.value == '3'"></app-harakteristiki>
+        <app-mnogabrazie *ngIf="navbar.value == '4'"></app-mnogabrazie>
+        <app-zakluchenie *ngIf="navbar.value == '5'"></app-zakluchenie>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

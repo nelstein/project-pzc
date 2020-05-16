@@ -1,0 +1,26 @@
+<input type="hidden" value="main" #tab>
+
+<div class="card-container">
+    <div class="card card-small" [ngClass]='tab.value == "main"? "selected":"not-selected"' (click)="tab.value = 'main'"
+        tabindex="0">
+        <span>Главная</span>
+    </div>
+
+    <div class="card card-small" [ngClass]='tab.value == "1"? "selected":"not-selected"' (click)="tab.value = '1'"
+        tabindex="0">
+        <span>Пример 1</span>
+    </div>
+
+    <div class="card card-small" [ngClass]='tab.value == "2"? "selected":"not-selected"' (click)="tab.value = '2'"
+        tabindex="0">
+        <span>Пример 2</span>
+    </div>
+
+    <div class="card card-small" [ngClass]='tab.value == "3"? "selected":"not-selected"' (click)="tab.value = '3'"
+        tabindex="0">
+        <span>Пример 3</span>
+    </div>
+</div>
+
+
+<app-primer1 *ngIf="tab.value == 'main'"></app-primer1>
