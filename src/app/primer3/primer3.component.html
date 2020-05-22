@@ -1,0 +1,17 @@
+<mat-sidenav-container class="page-container">
+    <input type="hidden" value="1" #navbar>
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <div class="card card-large" [ngClass]='navbar.value == "1"? "selected":"not-selected"'
+                (click)="navbar.value = '1'" navbarindex="0">
+                <span>Практическая часть</span>
+            </div>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-prakticheskaya3 *ngIf="navbar.value == '1'"></app-prakticheskaya3>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+

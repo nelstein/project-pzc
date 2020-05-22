@@ -1,0 +1,56 @@
+<span>
+    <div class="pad-down">
+        <h4 class="pad-down">Лабораторная работа : Основные технические характеристики ФПЗС-камер </h4>
+        <p class="pad-down"> Расчёт фокусное расстояние используемого объектива, а также аппаратное отношение сигнал/шум
+        </p>
+        <p>Исходные данные :</p>
+    </div>
+
+    <div>
+        <p class="pad-down">λ<sub>л</sub> = <span [innerHTML]="l1"></span> * 10 <sup>-6</sup> [мкм] - длина
+            волны</p>
+        <p class="pad-down">D<sub><i>д</i></sub> = <span [innerHTML]="dd"></span> * 10 <sup>-3</sup>[mm] - диаметр диска
+        </p>
+        <p class="pad-down">D<sub><i>об</i></sub> = <span [innerHTML]="dob"></span> * 10 <sup>-3</sup>[mm] - диаметр
+            входного зрачка
+        </p>
+        <p class="pad-down">ρ<sub><i>д</i></sub> = <span [innerHTML]="pd"></span> - коэффициент диффузного отражения по
+            интенсивности
+            освещенность
+        </p>
+        <p class="pad-down">l<sub>x</sub> = <span [innerHTML]="lx"></span> * 10 <sup>-16</sup> [Вт⋅м<sup>2</sup>], 
+            l<sub>y</sub> = <span [innerHTML]="ly"></span> * 10 <sup>6</sup> [м⋅К] -
+            lx, ly – линейные размеры фоточувствительной зоны ФПЗС-матрицы</p>
+        <p class="pad-down">η(λ) = <span [innerHTML]="n"></span> - квантовая эффективность</p>
+
+
+        <p class="pad-down">T<sub>фн</sub> = <span [innerHTML]="tfn"></span> [К] -
+            цветовая температурa</p>
+
+        <p class="pad-down">E<sub>фн</sub> = <span [innerHTML]="Efn"></span> [лк] -
+            освещенность фона</p>
+
+        <p class="pad-down">ρ<sub>фн</sub> = <span [innerHTML]="pfn"></span>  -
+            коэффициент отражения фона по интенсивности</p>
+        <p class="pad-down">P<sub>л</sub> = <span [innerHTML]="pl"></span> [мВт] -
+            температурa</p>
+        <p class="pad-down">l = <span [innerHTML]="l"></span> [м]
+            – расстояниe Дискa</p>
+        <p class="pad-down">ω<sub>л</sub> = <span [innerHTML]="wl"></span> [К] -
+            расходимость</p>
+        <p class="pad-down">ω<sub>пр</sub> = <span [innerHTML]="wp"></span> [К] -
+            горизонтальное угловое поле зрения</p>
+
+        <p class="pad-down">h = <span [innerHTML]="h"></span> * 10 <sup>-34</sup> [Дж⋅с]
+            – постоянная Планка</p>
+        <p class="pad-down">c = <span [innerHTML]="c"></span> * 10 <sup>8</sup> [м/с] -
+            скорость света</p>
+        <p class="pad-down">σ = <span [innerHTML]="d"></span> * 10 <sup>-8</sup>
+            [Вт/(м<sup>2</sup>К<sup>4</sup>)] - постоянная Стефана-Больцмана</p>
+
+    </div>
+    <!-- <div>
+        <mat-slider thumbLabel color="accent" [displayWith]="formatLabel"  step="10" tickInterval="1" min="0.2" max="1.1"></mat-slider>
+    </div> -->
+
+</span>

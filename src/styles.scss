@@ -30,6 +30,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0;
     line-height: 1.4;
   }
+  img{
+    width: 100%;
+  }
 
   .image{
     margin: 30px 10px;
@@ -192,6 +195,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .content-container{
     margin-left: 80px;
+  }
+
+  mat-slider {
+    width: 300px;
+  }
+  .subscript{
+    padding-top: 5px;
+    position: initial;
+    font-size: small;
+    padding-right: 10px;
   }
 
   /* Responsive Styles */
