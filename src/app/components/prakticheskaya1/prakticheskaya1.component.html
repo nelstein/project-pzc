@@ -1,41 +1,92 @@
 <span>
-    <div class="pad-down">
-        <h4 class="pad-down">Лабораторная работа : Принципы построения изображающих ПЗС </h4>
-        <p class="pad-down"> Расчёт освещенности среднее число фотоэлектронов nф</p>
-        <p>Исходные данные :</p>
-    </div>
+        <div class="pad-down">
+                <h4 class="pad-down">Практическое задание 1</h4>
 
-    <div>
+        </div>
+
+        <div class="pad-down">
+                <h4>Задание.</h4>
+                <p>Постоянная равномерная пороговая освещенность поверхности
+                        типовой ФПЗС-матрицы, определяемая источником с коррелированной
+                        цветовой температурой Т<sub>цв</sub> = 2856 К, составляет Е <sub>пор</sub> = 0,1 лк.</p>
+                <p>Исходные данные :</p>
+        </div>
+
+        <div class="pad-down">
+                <p> <b>Определить</b> соответствующее этой освещенности среднее число
+                        фотоэлектронов n ф ,
+                        накопленных одним элементом ФПЗС площадью Аэ = 100 мкм2 в зависимости от
+                        времени Тн (Тн изменяем от 10 до 50 мс).
+                        Основные характеристики типовой ФПЗС-матрицы представлены в Вкладкe <b>Характеристики типовой
+                                ФПЗС-матрицы</b> </p>
+        </div>
+
+        <!-- <mathjax [content] = "$\frac{0.1\cdot 10\cdot 100}{683\cdot 6.626\cdot 10^{-34}\cdot 3.0\cdot 10^8\cdot \left(5.6687\cdot 10^{-8}\right)\cdot \left(2856\right)^4}\int _{0.25\cdot 10^{-6}}^{1.5\cdot 10^{-6}}\:\cdot \frac{3.743\cdot 10^{-16}}{1.2864\cdot 10^{-15}\cdot 2856^5\cdot \left(600\cdot \:10^{-6}\right)^5\cdot \:e^{\left(\frac{1.4388\cdot 10^2}{\left(600\cdot 10^{-6}\cdot 2856\right)^{\:}}\right)-1}} $"></mathjax> -->
+        <h4 class="pad-down">Основные формулы</h4>
+        <div class="image flex pad-down">
+                <img src="assets/eqn-1.1.png">
+                <p class="left"> 1.1
+                </p>
+        </div>
+
+        <div class="image flex pad-down">
+                <img src="assets/eqn-1.2.png">
+                <p class="left"> 1.2
+                </p>
+        </div>
+
+        <div class="image flex pad-down">
+                <img src="assets/eqn-1.3.png">
+                <p class="left"> 1.3
+                </p>
+        </div>
+
+        <div class="image flex pad-down">
+                <img src="assets/eqn-1.4.png">
+                <p class="left"> 1.4
+                </p>
+        </div>
+
+        <h4 class="pad-down">Исходные данные :</h4>
+
         <p class="pad-down">Т<sub>цв</sub> = <span> <span [innerHTML]="ts"></span> [К] - цветовая
-                температура источника</span></p>
+                        температура источника</span></p>
         <p class="pad-down">Т<sub>н</sub> = <span> <span [innerHTML]="tn"></span> [мс] - время
-            </span></p>
+                </span></p>
         <p class="pad-down">А<sub>э</sub> = <span> <span [innerHTML]="Ae"></span> [мкм<sup>2</sup>] -
-                площадь</span></p>
+                        площадь</span></p>
         <p class="pad-down">А<sub>пор</sub> = <span> <span [innerHTML]="En"></span> [лк] - пороговая
-                освещенность</span></p>
-        <p class="pad-down">λ<sub>1</sub> = <span> <span [innerHTML]="l1"></span> * 10 <sup>-6</sup> [лк] - пороговая
-                освещенность</span></p>
-        <p class="pad-down">λ<sub>2</sub> = <span> <span [innerHTML]="l2"></span> * 10 <sup>-6</sup> [лк] - пороговая
-                освещенность</span></p>
-        <p class="pad-down">λ<sub>x</sub> = <span> <span [innerHTML]="lx"></span> * 10 <sup>-6</sup> [лк] - пороговая
-                освещенность</span></p>
-        <p class="pad-down">C<sub>1</sub> = <span> <span [innerHTML]="c1"></span> * 10 <sup>-16</sup> [Вт⋅м<sup>2</sup>]
-                - констант</span></p>
+                        освещенность</span></p>
+        <p class="pad-down">λ<sub>1</sub> = <span> <span [innerHTML]="l1"></span> * 10 <sup>-6</sup> [лк] -
+                        пороговая
+                        освещенность</span></p>
+        <p class="pad-down">λ<sub>2</sub> = <span> <span [innerHTML]="l2"></span> * 10 <sup>-6</sup> [лк] -
+                        пороговая
+                        освещенность</span></p>
+        <p class="pad-down">λ<sub>x</sub> = <span> <span [innerHTML]="lx"></span> * 10 <sup>-6</sup> [лк] -
+                        пороговая
+                        освещенность</span></p>
+        <p class="pad-down">C<sub>1</sub> = <span> <span [innerHTML]="c1"></span> * 10 <sup>-16</sup>
+                        [Вт⋅м<sup>2</sup>]
+                        - констант</span></p>
         <p class="pad-down">C<sub>2</sub> = <span> <span [innerHTML]="c2"></span> * 10 <sup>6</sup> [м⋅К] -
-                констант</span></p>
+                        констант</span></p>
         <p class="pad-down">C<sub>3</sub> = <span> <span [innerHTML]="c3"></span> * 10 <sup>-15</sup>
-                [Вт/(м<sup>3</sup>К<sup>5</sup>)] - констант</span></p>
+                        [Вт/(м<sup>3</sup>К<sup>5</sup>)] - констант</span></p>
         <p class="pad-down">h = <span> <span [innerHTML]="c1"></span> * 10 <sup>-34</sup> [Дж⋅с]
-                – постоянная Планка</span></p>
+                        – постоянная Планка</span></p>
         <p class="pad-down">c = <span> <span [innerHTML]="c"></span> * 10 <sup>8</sup> [м/с] -
-                скорость света</span></p>
+                        скорость света</span></p>
         <p class="pad-down">σ = <span> <span [innerHTML]="d"></span> * 10 <sup>-8</sup>
-                [Вт/(м<sup>2</sup>К<sup>4</sup>)] - постоянная Стефана-Больцмана</span></p>
+                        [Вт/(м<sup>2</sup>К<sup>4</sup>)] - постоянная Стефана-Больцмана</span></p>
 
-    </div>
-    <!-- <div>
-        <mat-slider thumbLabel color="accent" [displayWith]="formatLabel"  step="10" tickInterval="1" min="0.2" max="1.1"></mat-slider>
-    </div> -->
+
+        <p>Подставить исходные данные в формулу 1.4 . Численные
+                значения для <i>n(λ)</i> взять из вкладкa <b>График</b>. Вычислить интегралы численным методом (с
+                помощью программы
+                «Mathcad»).
+                Построить график зависимости n ф (Тн).</p>
+
+
 
 </span>

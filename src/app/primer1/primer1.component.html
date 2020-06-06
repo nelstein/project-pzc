@@ -12,12 +12,31 @@
                 (click)="navbar.value = '1'" navbarindex="0">
                 <span>Практическая часть</span>
             </div>
+            <div class="card card-large" [ngClass]='navbar.value == "2"? "selected":"not-selected"'
+                (click)="navbar.value = '2'" navbarindex="0">
+                <span> Характеристики типовой
+                    ФПЗС-матрицы).</span>
+            </div>
+            <div class="card card-large" [ngClass]='navbar.value == "3"? "selected":"not-selected"'
+                (click)="navbar.value = '3'" navbarindex="0">
+                <span>График</span>
+            </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "4"? "selected":"not-selected"'
+                (click)="navbar.value = '4'" navbarindex="0">
+                <span> Контрольные вопросы</span>
+            </div>
+
+
 
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <app-printsipi-pzc *ngIf="navbar.value == 'main'"></app-printsipi-pzc>
         <app-prakticheskaya1 *ngIf="navbar.value == '1'"></app-prakticheskaya1>
+        <app-prilozhenia1 *ngIf="navbar.value == '2'"></app-prilozhenia1>
+        <app-grafika1 *ngIf="navbar.value == '3'"></app-grafika1>
+        <app-voprosi1 *ngIf="navbar.value == '4'"></app-voprosi1>
     </mat-sidenav-content>
 
 </mat-sidenav-container>

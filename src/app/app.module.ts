@@ -12,6 +12,7 @@ import { GlavniyComponent } from './glavniy/glavniy.component';
 import { Primer2Component } from './primer2/primer2.component';
 import { Primer3Component } from './primer3/primer3.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +24,17 @@ import { Primer3Component } from './primer3/primer3.component';
     Primer3Component,
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
+
   ],
   exports: [
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

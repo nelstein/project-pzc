@@ -5,13 +5,24 @@
 
             <div class="card card-large" [ngClass]='navbar.value == "1"? "selected":"not-selected"'
                 (click)="navbar.value = '1'" navbarindex="0">
+                <span>Основные определения</span>
+            </div>
+            <div class="card card-large" [ngClass]='navbar.value == "2"? "selected":"not-selected"'
+                (click)="navbar.value = '2'" navbarindex="0">
                 <span>Практическая часть</span>
             </div>
+
+            <div class="card card-large" [ngClass]='navbar.value == "3"? "selected":"not-selected"'
+            (click)="navbar.value = '3'" navbarindex="0">
+            <span> Контрольные вопросы</span>
+        </div>
 
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-prakticheskaya2 *ngIf="navbar.value == '1'"></app-prakticheskaya2>
+        <app-osnovniye *ngIf="navbar.value == '1'"></app-osnovniye>
+        <app-prakticheskaya2 *ngIf="navbar.value == '2'"></app-prakticheskaya2>
+        <app-voprosi2 *ngIf="navbar.value == '3'"></app-voprosi2>
     </mat-sidenav-content>
 
 </mat-sidenav-container>

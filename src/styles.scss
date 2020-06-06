@@ -131,6 +131,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
    
   }
 
+  .left{
+    padding-left: 20px;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .bold{
+    font-weight: bold;
+    font-size: large;
+}
+
   .card.card-large {
     height: 16px;
     width: 268px;
