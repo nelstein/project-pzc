@@ -23,7 +23,22 @@ export class Prakticheskaya2Component implements OnInit {
   pl = 30
   wl = 5
   wp = 5
-  constructor() { }
+
+  eqn1
+  eqn2
+  eqn3
+  eqn4
+  eqn5
+
+  constructor() { 
+    this.eqn1 = '\\frac{Р_{л} ρ_{д}D_{об}^2 D_д^2 а_{х} a_{у}λ_{л} η(λ_{л})Т_{н}}{4πhcl^4 ω^2 D_{д}^{\'2}}'
+    this.eqn2 = '\\n';
+    this.eqn3 = '\\frac{Р_{л} ρ_{фн}D_{об}^2 а_{х} a_{у}λ_{л} η(λ_{л})Т_{н}}{πhc l^2 d_{фпзс}^2}'
+    this.eqn4 = '\\frac{ρ_{д} ω_{пр}^2 D_{об}^2 D_д^2 а_{х} a_{у}λ_{л} η(λ_{л})Т_{н}^∞}{πhc l^2 d_{фпзс}^2K_{гл}σТ_{фн}^4}∫_0^∞M_{λ,отн}^0 (λ,T)η(λ)λdλ'
+    // this.eqn5 = '\\20lg\frac{\Delta n_{c}}{sqrt{}}'
+  }
+
+  
 
   ngOnInit() {
   }

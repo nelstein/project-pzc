@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~katex/dist/katex.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -196,6 +197,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 1920px;
   }
 
+  .mat-primary .mat-slider-thumb, .mat-primary .mat-slider-thumb-label, .mat-primary .mat-slider-track-fill {
+       background-color: #336d86;
+    }
+    
+    
+    
+    .mat-slider-horizontal .mat-slider-track-wrapper{
+    
+        background: gray !important;
+    
+    }
+    
+    .mat-slider-horizontal .mat-slider-ticks {
+
+    }
+
   .mat-drawer-container, .mat-drawer{
     background-color: transparent !important;
     color: unset;
@@ -211,13 +228,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   mat-slider {
-    width: 300px;
+    margin: -12px 10px 0px;
   }
+
   .subscript{
     padding-top: 5px;
     position: initial;
     font-size: small;
     padding-right: 10px;
+  }
+
+  .eqn{
+    margin: 28px 0 0 50px;
+  }
+
+  .left-eqn{
+    margin: 28px 16px;
+    font-size: large;
+  }
+
+  .mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb, .mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb-label{
+    background-color: #336D94;
   }
 
   /* Responsive Styles */

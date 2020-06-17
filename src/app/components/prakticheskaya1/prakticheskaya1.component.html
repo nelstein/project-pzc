@@ -21,38 +21,51 @@
                                 ФПЗС-матрицы</b> </p>
         </div>
 
-        <!-- <mathjax [content] = "$\frac{0.1\cdot 10\cdot 100}{683\cdot 6.626\cdot 10^{-34}\cdot 3.0\cdot 10^8\cdot \left(5.6687\cdot 10^{-8}\right)\cdot \left(2856\right)^4}\int _{0.25\cdot 10^{-6}}^{1.5\cdot 10^{-6}}\:\cdot \frac{3.743\cdot 10^{-16}}{1.2864\cdot 10^{-15}\cdot 2856^5\cdot \left(600\cdot \:10^{-6}\right)^5\cdot \:e^{\left(\frac{1.4388\cdot 10^2}{\left(600\cdot 10^{-6}\cdot 2856\right)^{\:}}\right)-1}} $"></mathjax> -->
+
+
         <h4 class="pad-down">Основные формулы</h4>
-        <div class="image flex pad-down">
-                <img src="assets/eqn-1.1.png">
-                <p class="left"> 1.1
+
+        <div class="flex pad-down">
+                <span class="left-eqn">n<sub>ф</sub> = </span>
+                <mathjax [content]="eqn1"></mathjax>
+
+                <p class="eqn"> 1.1
                 </p>
         </div>
 
-        <div class="image flex pad-down">
-                <img src="assets/eqn-1.2.png">
-                <p class="left"> 1.2
+        <div class="flex pad-down">
+                <span class="left-eqn">M<sup>о</sup><sub>λ,отн</sub> (λ,T) =</span>
+                <mathjax [content]="eqn2"></mathjax>
+                <p class="eqn"> 1.2
                 </p>
         </div>
 
-        <div class="image flex pad-down">
-                <img src="assets/eqn-1.3.png">
-                <p class="left"> 1.3
+        <div class="flex pad-down">
+                <span class="left-eqn">E<sub>max</sub> =</span>
+                <mathjax [content]="eqn3"></mathjax>
+                <p class="eqn"> 1.3
+                </p>
+        </div>
+        <div class="flex pad-down">
+                <span class="left-eqn">n<sub>ф</sub> = </span>
+                <mathjax [content]="eqn4"></mathjax>
+                <p class="eqn"> 1.4
                 </p>
         </div>
 
-        <div class="image flex pad-down">
-                <img src="assets/eqn-1.4.png">
-                <p class="left"> 1.4
-                </p>
-        </div>
 
         <h4 class="pad-down">Исходные данные :</h4>
 
         <p class="pad-down">Т<sub>цв</sub> = <span> <span [innerHTML]="ts"></span> [К] - цветовая
                         температура источника</span></p>
-        <p class="pad-down">Т<sub>н</sub> = <span> <span [innerHTML]="tn"></span> [мс] - время
-                </span></p>
+
+        <div class="slider">
+                <p class="pad-down">Т<sub>н</sub> = <span> <span [innerHTML]="tn"></span> [мс] - время
+                        </span></p>
+                <mat-slider color="primary" thumbLabel tickInterval="1" min="10" max="50" step="5" [value]=tn
+                        (change)="onTchange($event)"></mat-slider>
+        </div>
+
         <p class="pad-down">А<sub>э</sub> = <span> <span [innerHTML]="Ae"></span> [мкм<sup>2</sup>] -
                         площадь</span></p>
         <p class="pad-down">А<sub>пор</sub> = <span> <span [innerHTML]="En"></span> [лк] - пороговая
@@ -79,7 +92,7 @@
                         скорость света</span></p>
         <p class="pad-down">σ = <span> <span [innerHTML]="d"></span> * 10 <sup>-8</sup>
                         [Вт/(м<sup>2</sup>К<sup>4</sup>)] - постоянная Стефана-Больцмана</span></p>
-
+        <p class="pad-down">n <sub>ф</sub> = <span [innerHTML]="m"></span> - среднее число фотоэлектронов</p>
 
         <p>Подставить исходные данные в формулу 1.4 . Численные
                 значения для <i>n(λ)</i> взять из вкладкa <b>График</b>. Вычислить интегралы численным методом (с

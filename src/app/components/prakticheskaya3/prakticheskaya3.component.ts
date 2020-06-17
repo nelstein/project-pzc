@@ -12,7 +12,13 @@ export class Prakticheskaya3Component implements OnInit {
   m = 796
   vxn = Math.round(this.m/(2*this.lx)) 
 
-  constructor() { }
+  eqn1
+  eqn2
+
+  constructor() { 
+    this.eqn1 = '\\frac1{d_{xп}}'
+    this.eqn2 = '\\frac{M}{2l_{x}}'
+  }
 
   ngOnInit() {
   }

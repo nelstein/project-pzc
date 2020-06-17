@@ -1,7 +1,7 @@
 <span>
     <div class="pad-down">
-        <h4 class="pad-down">Лабораторная работа : Модуляционная передаточная функция ФПЗС </h4>
-        <h4 class="pad-down">Задание</h4>
+
+        <h4 class="pad-down">Практическое задание 3</h4>
         <p class="pad-down">На ФПЗС-матрицу, входящую в состав интерферометра, проецируется
             изображение вертикально ориентированных интерференционных полос.
             Установить, возникнут ли искажения в изображении этой интерференционной картины на
@@ -10,17 +10,21 @@
             Технические характеристики ФПЗС-матрицы(см. вкладку
             из задание 1).</p>
         <h4 class="pad-down">Основные формулы</h4>
-        <div class="image flex pad-down">
-            <img src="assets/eqn-3.1.png">
-            <p class="left"> 3.1
+
+        <div class="flex pad-down">
+            <span class="left-eqn">V<sub>xп</sub> = </span>
+            <mathjax [content]="eqn1"></mathjax>
+            <p class="eqn"> 1.1
             </p>
         </div>
 
-        <div class="image flex pad-down">
-            <img src="assets/eqn-3.2.png">
-            <p class="left"> 3.2
+        <div class="flex pad-down">
+            <span class="left-eqn">V<sub>xN</sub> = </span>
+            <mathjax [content]="eqn2"></mathjax>
+            <p class="eqn"> 1.2
             </p>
         </div>
+        
         <h4 class="pad-down">Исходные данные :</h4>
 
     </div>
@@ -37,7 +41,7 @@
         <p class="pad-down">V<sub>xn</sub> = <span [innerHTML]="vxn"></span> * 10 <sup>3</sup> [м<sup>-1</sup>] -
             частота Найквиста вдоль оси ν<sub>x</sub>
         </p>
-        <p>Сравнить полученные значения для xП n и xN n . Если xП xN n &gt; n, то на экране
+        <p>Сравнить полученные значения для ν<sub>xП</sub> и ν<sub>xN</sub>. Если ν<sub>xП</sub> > ν<sub>xN</sub>, то на экране
             видеомонитора обязательно возникнут нелинейные искажения в виде эффекта Муара
             изображения регистрируемых интерференционных полос.</p>
     </div>

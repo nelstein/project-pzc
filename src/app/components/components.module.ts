@@ -18,7 +18,7 @@ import { Osnovniye3Component } from './osnovniye3/osnovniye3.component';
 import { Voprosi1Component } from './voprosi1/voprosi1.component';
 import { Voprosi2Component } from './voprosi2/voprosi2.component';
 import { Voprosi3Component } from './voprosi3/voprosi3.component';
-
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -26,12 +26,12 @@ import { Voprosi3Component } from './voprosi3/voprosi3.component';
     Prakticheskaya2Component, Prakticheskaya3Component, Prilozhenia1Component, Grafika1Component, 
     MathjaxComponent, OsnovniyeComponent, Osnovniye3Component, Voprosi1Component, Voprosi2Component, Voprosi3Component],
   imports: [
-
+    KatexModule,
     CommonModule,
     MaterialModule
   ],
   exports: [
-    DostoinstvaComponent, OsnovniyeComponent, Osnovniye3Component,
+    DostoinstvaComponent, OsnovniyeComponent, Osnovniye3Component,KatexModule,
     PremushestvaComponent, MathjaxComponent, Voprosi1Component, Voprosi2Component, Voprosi3Component,
     HarakteristikiComponent, Prakticheskaya1Component, Prilozhenia1Component, Grafika1Component,
     MnogabrazieComponent, ZakluchenieComponent, PrintsipiPzcComponent, Prakticheskaya2Component, Prakticheskaya3Component,
