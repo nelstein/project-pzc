@@ -2,7 +2,9 @@
 @import '~katex/dist/katex.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  background-color: aliceblue;
+   font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 :host {
@@ -30,6 +32,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   p {
     margin: 0;
     line-height: 1.4;
+    font-size: large;
   }
   img{
     width: 100%;
@@ -120,6 +123,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+    font-size: large;
   }
 
   .card-container .card:not(:last-child) {
@@ -146,7 +150,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
   .card.card-large {
-    height: 16px;
+    height: 26px;
     width: 268px;
     justify-content:left;
     margin-right: 50px;
@@ -209,9 +213,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     
     }
     
-    .mat-slider-horizontal .mat-slider-ticks {
-
-    }
 
   .mat-drawer-container, .mat-drawer{
     background-color: transparent !important;
@@ -219,16 +220,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .page-container{
-      width: 80%;
-      height: 100%;
+    width: 97%;
   }
 
   .content-container{
     margin-left: 80px;
   }
 
+  .input{
+    width: 40px;
+    font-size: large;
+}
+
   mat-slider {
     margin: -12px 10px 0px;
+  }
+
+  .mat-drawer-container{
+    height: 100%;
+
   }
 
   .subscript{

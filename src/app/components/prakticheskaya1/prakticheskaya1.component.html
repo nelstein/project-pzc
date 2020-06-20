@@ -59,26 +59,29 @@
         <p class="pad-down">Т<sub>цв</sub> = <span> <span [innerHTML]="ts"></span> [К] - цветовая
                         температура источника</span></p>
 
-        <div class="slider">
-                <p class="pad-down">Т<sub>н</sub> = <span> <span [innerHTML]="tn"></span> [мс] - время
-                        </span></p>
-                <mat-slider color="primary" thumbLabel tickInterval="1" min="10" max="50" step="5" [value]=tn
-                        (change)="onTchange($event)"></mat-slider>
-        </div>
 
-        <p class="pad-down">А<sub>э</sub> = <span> <span [innerHTML]="Ae"></span> [мкм<sup>2</sup>] -
+
+        <p class="pad-down">А<sub>э</sub> = <span> <span [innerHTML]="Ae"></span> * 10 <sup>-12</sup> [м<sup>2</sup>] -
                         площадь</span></p>
         <p class="pad-down">А<sub>пор</sub> = <span> <span [innerHTML]="En"></span> [лк] - пороговая
                         освещенность</span></p>
-        <p class="pad-down">λ<sub>1</sub> = <span> <span [innerHTML]="l1"></span> * 10 <sup>-6</sup> [лк] -
+        <p class="pad-down">λ<sub>1</sub> = <span> <input matInput (change)="onL1change($event)" [(value)]="l1"
+                                class="input"> * 10 <sup>-6</sup> [м] -
                         пороговая
                         освещенность</span></p>
-        <p class="pad-down">λ<sub>2</sub> = <span> <span [innerHTML]="l2"></span> * 10 <sup>-6</sup> [лк] -
+        <p class="pad-down">λ<sub>2</sub> = <span> <input matInput (change)="onL2change($event)" [(value)]="l2"
+                                class="input"> * 10 <sup>-6</sup> [м] -
                         пороговая
                         освещенность</span></p>
-        <p class="pad-down">λ<sub>x</sub> = <span> <span [innerHTML]="lx"></span> * 10 <sup>-6</sup> [лк] -
+        <p class="pad-down">λ<sub>x</sub> = <span> <input matInput (change)="onLchange($event)" [(value)]="lx"
+                                class="input">
+                        * 10 <sup>-6</sup> [м] -
                         пороговая
                         освещенность</span></p>
+
+        <p class="pad-down">n(λ) = <span> <input matInput (change)="onNchange($event)" [(value)]="n" class="input">
+                        - спектральная плотность квантовой эффективности</span></p>
+
         <p class="pad-down">C<sub>1</sub> = <span> <span [innerHTML]="c1"></span> * 10 <sup>-16</sup>
                         [Вт⋅м<sup>2</sup>]
                         - констант</span></p>
@@ -92,10 +95,30 @@
                         скорость света</span></p>
         <p class="pad-down">σ = <span> <span [innerHTML]="d"></span> * 10 <sup>-8</sup>
                         [Вт/(м<sup>2</sup>К<sup>4</sup>)] - постоянная Стефана-Больцмана</span></p>
-        <p class="pad-down">n <sub>ф</sub> = <span [innerHTML]="m"></span> - среднее число фотоэлектронов</p>
+
+        <div class="slider">
+                <p class="pad-down">Т<sub>н</sub> = <mat-slider color="primary" thumbLabel tickInterval="1" min="10"
+                                max="50" step="5" [value]=tn (change)="onTchange($event)"></mat-slider><span> <span
+                                        [innerHTML]="tn"></span> [мс] - время
+                        </span></p>
+
+        </div>
+
+        <div class="flex pad-down">
+                <span class="left-eqn">M<sup>о</sup><sub>λ,отн</sub> (λ,T) =</span>
+                <mathjax [content]="eqn6"></mathjax>
+                <p class="eqn">= <span [innerHTML]="m"></span> </p>
+        </div>
+        <p class="pad-down">- плотность относительного спектрального распределения светимости АЧТ</p>
+
+        <div class="flex pad-down">
+                <span class="left-eqn">n<sub>ф</sub> = </span>
+                <mathjax [content]="eqn5"></mathjax>
+                <p class="eqn">= <span [innerHTML]="nf"></span> - среднее число фотоэлектронов</p>
+        </div>
 
         <p>Подставить исходные данные в формулу 1.4 . Численные
-                значения для <i>n(λ)</i> взять из вкладкa <b>График</b>. Вычислить интегралы численным методом (с
+                значения для <i>n(λ)</i> взять из вкладки <b>График</b>. Вычислить интегралы численным методом (с
                 помощью программы
                 «Mathcad»).
                 Построить график зависимости n ф (Тн).</p>

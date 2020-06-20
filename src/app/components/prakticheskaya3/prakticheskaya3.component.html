@@ -6,9 +6,9 @@
             изображение вертикально ориентированных интерференционных полос.
             Установить, возникнут ли искажения в изображении этой интерференционной картины на
             экране видеомонитора, при различных расстояниях между соседними светлыми полосами
-            (d xп изменяется от 2 до 10 мкм).
+            (d <sub>xп</sub> изменяется от 2 до 10 мкм).
             Технические характеристики ФПЗС-матрицы(см. вкладку
-            из задание 1).</p>
+            из задания 1).</p>
         <h4 class="pad-down">Основные формулы</h4>
 
         <div class="flex pad-down">
@@ -24,24 +24,58 @@
             <p class="eqn"> 1.2
             </p>
         </div>
-        
+
         <h4 class="pad-down">Исходные данные :</h4>
 
     </div>
 
     <div>
-        <p class="pad-down">d<sub>xп</sub> = <span [innerHTML]="dxp"></span> * 10 <sup>-6</sup> [м] - расстояние между
-            соседними светлыми полосами</p>
-        <p class="pad-down">V<sub>xп</sub> = <span [innerHTML]="vxp"></span> * 10 <sup>6</sup> [м<sup>-1</sup>] -
-            пространственная частота
+
+
+        <div class="slider">
+
+            <p class="pad-down">d<sub>xп</sub>
+                <mat-slider color="primary" thumbLabel tickInterval="1" min="2" max="10" step="1" [value]=dxp
+                    (change)="onLchange($event)"></mat-slider> = <span [innerHTML]="dxp"></span> * 10 <sup>-6</sup> [м]
+                - расстояние
+                между
+                соседними светлыми полосами
+            </p>
+
+
+        </div>
+
+        <p class="pad-down">l<sub>x</sub> = <span [innerHTML]="lx"></span> * 10 <sup>-3</sup> [м] -
+            размер по горизонтали
         </p>
+
         <p class="pad-down">M = <span [innerHTML]="m"></span> - число строк ФПЗС- матрицы
-            пространственная частота
         </p>
-        <p class="pad-down">V<sub>xn</sub> = <span [innerHTML]="vxn"></span> * 10 <sup>3</sup> [м<sup>-1</sup>] -
-            частота Найквиста вдоль оси ν<sub>x</sub>
-        </p>
-        <p>Сравнить полученные значения для ν<sub>xП</sub> и ν<sub>xN</sub>. Если ν<sub>xП</sub> > ν<sub>xN</sub>, то на экране
+
+
+
+
+        <div class="flex pad-down">
+            <span class="left-eqn">V<sub>xп</sub> = </span>
+            <mathjax [content]="eqn3"></mathjax>
+            <p class="eqn"> = <span [innerHTML]="vxp"></span> * 10 <sup>6</sup> [м<sup>-1</sup>] -
+                пространственная частота
+            </p>
+
+        </div>
+
+        <div class="flex pad-down">
+            <span class="left-eqn">V<sub>xN</sub> = </span>
+            <mathjax [content]="eqn4"></mathjax>
+
+            <p class="eqn"> = <span [innerHTML]="vxn"></span> * 10 <sup>3</sup> [м<sup>-1</sup>] - частота Найквиста
+                вдоль оси νx
+            </p>
+        </div>
+
+
+        <p>Сравнить полученные значения для ν<sub>xП</sub> и ν<sub>xN</sub>. Если ν<sub>xП</sub> > ν<sub>xN</sub>, то на
+            экране
             видеомонитора обязательно возникнут нелинейные искажения в виде эффекта Муара
             изображения регистрируемых интерференционных полос.</p>
     </div>
